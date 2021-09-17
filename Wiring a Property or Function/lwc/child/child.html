@@ -1,0 +1,12 @@
+<template>
+	<lightning-card title="Wire Sample" icon-name="standard:contact">
+		<template if:true={recordId}>
+			<div class="slds-var-m-around_medium">
+				<p>{email}</p>
+			</div>
+			<div class="slds-var-m-around_medium">
+				<p>{errorMessage}</p>
+			</div>			
+		</template>
+	</lightning-card>
+</template>
