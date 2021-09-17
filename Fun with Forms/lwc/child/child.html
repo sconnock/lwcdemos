@@ -1,0 +1,64 @@
+<template>
+	<lightning-card title="Fun with Forms">
+
+		<div class="slds-var-m-around_small">
+			<lightning-input label="Object API Name" value={objectApiName} onchange={handleChange}></lightning-input>
+			<lightning-input label="Record ID" value={recordId} onchange={handleChange}></lightning-input>
+		</div>
+
+		<div class="slds-var-m-around_small">
+			<lightning-button-group>
+				<lightning-button variant="neutral" label="lightning-record-form" onclick={handleClick}></lightning-button>
+				<lightning-button variant="neutral" label="lightning-record-edit-form" onclick={handleClick}></lightning-button>
+				<lightning-button variant="neutral" label="lightning-record-view-form" onclick={handleClick}></lightning-button>
+			</lightning-button-group>
+		</div>	
+
+		<template if:true={showRecordForm}>
+			<div class="slds-var-m-around_medium">
+				Record Form
+				<lightning-record-form 
+					record-id={recordId} 
+					object-api-name={objectApiName} 
+					fields={fields} 
+					columns="1" 
+					mode="edit"
+					onsuccess={handleSuccess}>
+				</lightning-record-form>
+			</div>
+		</template>
+
+		<template if:true={showRecordViewForm}>
+			<div class="slds-var-m-around_medium">
+				Record View Form
+				<lightning-record-view-form record-id={recordId} object-api-name={objectApiName}>
+
+					<lightning-output-field field-name="FirstName"></lightning-output-field>
+					<lightning-output-field field-name="LastName"></lightning-output-field>
+					<lightning-output-field field-name="LeadSource"></lightning-output-field>
+					<lightning-output-field field-name="AccountId"></lightning-output-field>
+
+				</lightning-record-view-form>
+			</div>
+		</template>		
+
+		<template if:true={showRecordEditForm}>
+			<div class="slds-var-m-around_medium">
+				Record Edit Form
+				<lightning-record-edit-form record-id={recordId} object-api-name={objectApiName} onsuccess={handleSuccess}>
+
+					<lightning-messages></lightning-messages>
+
+					<lightning-input-field field-name="FirstName"></lightning-input-field>
+					<lightning-input-field field-name="LastName"></lightning-input-field>
+					<lightning-input-field field-name="LeadSource"></lightning-input-field>
+					<lightning-input-field field-name="AccountId"></lightning-input-field>
+
+					<lightning-button type="submit" name="save" label="Save"></lightning-button>
+
+				</lightning-record-edit-form>
+			</div>
+		</template>				
+
+	</lightning-card>
+</template>
