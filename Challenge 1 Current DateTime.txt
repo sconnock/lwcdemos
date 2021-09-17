@@ -1,0 +1,65 @@
+<!-- challenge_currentDateTime.html -->
+<template>
+	<lightning-card title="Current Date and Time" icon-name="utility:date_time">
+		<lightning-button-icon icon-name="action:refresh" slot="actions" onclick={updateDate}></lightning-button-icon>
+		<div class="slds-var-m-left_medium">
+			<lightning-formatted-date-time value={currentDate} year="numeric" month="numeric" weekday="long"
+				day="numeric" hour="2-digit" minute="2-digit" hour12="true" second="2-digit">
+			</lightning-formatted-date-time>
+		</div>
+	</lightning-card>
+</template>
+
+<!-- challenge_currentDateTime.js -->
+import { LightningElement } from 'lwc';
+
+export default class Challenge_dateTime extends LightningElement {
+	
+	currentDate = new Date();
+	
+	updateDate() {
+		this.currentDate = new Date();
+	}
+	
+	// Want the timer to update itself? Declare a setInterval in the connectedCallback() lifecycle event. 
+
+	// connectedCallback() {
+	// 	setInterval(() => {
+	// 		this.currentDate = new Date();
+	// 	}, 1000);
+	// }
+
+	// ES6 TRIVIA: 
+	// The following, which doesn't use an arrow function, does not cause the date/time to update on the screen
+	// Can you figure out why, and come up with a possible fix?
+	// 
+	// Reason is that "this" is now scoped to the calling function - namely connectedCallback
+
+	// connectedCallback() {
+	// 	setInterval( function() {
+	// 		this.currentDate = new Date();
+	// 	}, 1000);
+	// }
+
+	// Problem is that "this" in an inner function now points to a different scope.
+	// Possible fix is to store the class object scoped "this" in a local variable in connectedCallback
+	// then reference that in the inner function call. Don't need to do this using the arrow function
+	// as the original "this" scope is preserved
+
+	// connectedCallback() {
+	// 	let that = this;
+	// 	setInterval( function() {
+	// 		that.currentDate = new Date();
+	// 	}, 1000);
+	// }
+}
+
+<!-- challenge_currentDateTime.js-meta.xml -->
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+	<targets>
+		<target>lightning__HomePage</target>
+	</targets>
+</LightningComponentBundle>
