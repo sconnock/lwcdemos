@@ -1,0 +1,32 @@
+<template>
+
+	<lightning-card title="Implementing Mutual Exclusivity Behaviour in lightning-button groups">
+		<div class="slds-m-around_medium">
+			<lightning-button-group>
+				<lightning-button variant="brand" label="View Map" onclick={handleClick} data-btnid="btn1">
+				</lightning-button>
+				<lightning-button variant="neutral" label="Walking Directions" onclick={handleClick} data-btnid="btn2">
+				</lightning-button>
+				<lightning-button variant="neutral" label="Driving Directions" onclick={handleClick} data-btnid="btn3">
+				</lightning-button>
+			</lightning-button-group>
+		</div>
+
+		<div class="slds-m-around_medium">
+			Currently selected button: {selectedButton}
+		</div>
+	</lightning-card>
+
+	<lightning-card title="Implementing Mutual Exclusivity Behaviour using lightning-radio-group">
+		<div class="slds-m-around_medium">
+			<lightning-radio-group type="button" name="directionType" value={selectedRadioButton} label=""
+				options={directionTypes} onchange={handleChange}>
+			</lightning-radio-group>
+		</div>
+
+		<div class="slds-m-around_medium">
+			Currently selected radio button: {selectedRadioButton}
+		</div>
+	</lightning-card>
+
+</template>
