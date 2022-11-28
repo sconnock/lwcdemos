@@ -1,0 +1,15 @@
+<template>
+
+	<lightning-card title="Child">
+		<div class="slds-m-around_small">
+			<lightning-input label="Private Child Property" value={privateChildProp}></lightning-input>
+			<lightning-input label="Public Child Property" value={childProp}></lightning-input>
+			<br/>
+			Uppercased: {childMessage}
+		</div>
+		<div class="slds-m-around_small">
+			<lightning-button label="Click to increment" onclick={handleClick}></lightning-button>
+		</div>
+	</lightning-card>
+
+</template>
