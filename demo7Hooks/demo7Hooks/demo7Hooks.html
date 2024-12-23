@@ -1,0 +1,21 @@
+<template>
+
+	<lightning-card title="Grand Parent">
+		<div class="slds-m-around_small">
+			<lightning-input label="Property1" value={property1}></lightning-input>
+		</div>
+		<div class="slds-m-around_small">
+			<lightning-button label="Click to increment" onclick={handleClick}></lightning-button>
+		</div>
+		<div class="slds-m-around_small">
+			<lightning-input label="Show Parent" checked type="checkbox" onchange={handleChange}></lightning-input>
+		</div>
+	</lightning-card>
+
+	<div class="slds-m-around_small">
+		<template if:true={showchild}>
+			<c-demo7-parent showchild={showchild} property1={property1}></c-demo7-parent>
+		</template>
+	</div>
+
+</template>

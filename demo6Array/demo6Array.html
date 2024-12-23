@@ -1,0 +1,21 @@
+<template>
+
+	<!-- for:each loop -->
+	<b>for:each loop</b>
+	<template for:each={beatleList} for:item="beatle">
+		<div key={beatle.Id}>
+			{beatle.Id}. {beatle.Name}
+		</div>
+	</template>
+
+	<!-- iterator loop -->
+	<br/><b>iterator loop</b>
+	<template iterator:it={beatleList}>
+		<div key={it.value.Id}>
+			<div if:true={it.first} class="list-first"></div>
+			{it.index}. {it.value.Name}<br/>
+			<div if:true={it.last} class="list-last"></div>
+		</div>
+	</template>
+
+</template>

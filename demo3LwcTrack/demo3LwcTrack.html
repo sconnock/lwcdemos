@@ -1,0 +1,9 @@
+<template>
+    <div>{student.first}, {student.last}</div>
+    <template for:each={classes} for:item="course">
+        {course},
+    </template>
+    <br />
+    <lightning-button label="Update Props" onclick={updateProps}>
+    </lightning-button>
+</template>

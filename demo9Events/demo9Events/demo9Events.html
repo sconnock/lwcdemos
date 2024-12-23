@@ -1,0 +1,13 @@
+<template>
+
+	<lightning-card title="Parent">
+		<div class="slds-m-around_small">
+			<lightning-input label="Message in Parent" value={property1}></lightning-input>
+		</div>
+
+		<div class="slds-m-around_small slds-box">
+			<c-demo9-child onsampleevent={handleSampleEvent}></c-demo9-child>
+		</div>
+	</lightning-card>
+
+</template>

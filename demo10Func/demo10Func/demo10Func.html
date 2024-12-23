@@ -1,0 +1,21 @@
+<template>
+
+	<lightning-card title="Parent">
+		<div class="slds-m-around_small">
+			<lightning-input label="Message to child" value={property1} onchange={handleChange}></lightning-input>
+		</div>
+
+		<div class="slds-m-around_small">
+			<lightning-input label="Response from child" value={property2} readonly></lightning-input>
+		</div>
+
+		<div class="slds-m-around_small">
+			<lightning-button label="Click to send message" onclick={handleClick}></lightning-button>
+		</div>
+
+		<div class="slds-m-around_small slds-box">
+			<c-demo10-child></c-demo10-child>
+		</div>
+	</lightning-card>
+
+</template>

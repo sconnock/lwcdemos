@@ -1,0 +1,40 @@
+<template>
+	<lightning-card title="Props Demo">
+		<div slot="actions">
+			<lightning-button-group>
+				<lightning-button variant="brand" label="untracked" icon-name="utility:refresh" onclick={changePrivate}>
+				</lightning-button><BR />
+				<lightning-button variant="destructive" label="tracked" icon-name="utility:refresh" onclick={changeReactive}>
+				</lightning-button><BR /><BR />
+			</lightning-button-group>
+		</div>
+
+		<div class="slds-p-horizontal_medium">
+			Private ids:
+			<template for:each={myPrivateIDs} for:item="oneId">
+				{oneId},
+			</template>
+			<BR /><BR />
+
+            Tracked ids:
+			<template for:each={myTrackedIDs} for:item="oneId">
+				{oneId},
+			</template>
+			<BR /><BR />
+		</div>
+
+		<BR />
+		<div class="slds-m-horizontal_small" style="padding:0.5rem;background:#16325c">
+
+			<div class="slds-text-color_inverse">
+				<strong>Instructions:</strong>
+				<ol class="slds-list_ordered">
+					<li>Click to append counter to untracked array. Nothing happens.</li>
+					<li>Click to append counter to tracked array. Both the private and tracked arrays update.</li>
+					<li>Click to append counter to tracked array again. Only the tracked array updates. Why?</li>
+				</ol>
+			</div>
+		</div>
+
+	</lightning-card>
+</template>

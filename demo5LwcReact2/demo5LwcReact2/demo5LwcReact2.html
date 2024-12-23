@@ -1,0 +1,17 @@
+<template>
+
+	<lightning-card title="Parent">
+		<div class="slds-m-around_small">
+			<lightning-input label="Private Property" value={parentPrivateProp}></lightning-input>
+			<lightning-input label="Parent message" value={parentMessage} onchange={handleChange}></lightning-input>
+		</div>
+		<div class="slds-m-around_small">
+			<lightning-button label="Click to increment Property" onclick={handleClick}></lightning-button>
+		</div>
+	</lightning-card>
+
+	<div class="slds-m-around_small">
+		<c-demo5-child child-prop={parentPrivateProp} child-message={parentMessage}></c-demo5-child>
+	</div>
+
+</template>

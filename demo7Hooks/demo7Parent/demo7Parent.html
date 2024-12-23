@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-card title="Parent">
+      <div class="slds-m-around_small">
+        <lightning-input label="@api Property1" value={property1}></lightning-input>
+      </div>
+      <div class="slds-m-around_small">
+        <lightning-button label="Click to increment" onclick={handleClick}></lightning-button>
+      </div>
+      <div class="slds-m-around_small">
+        <template if:true={showchild}>
+          <lightning-input label="Show Child" checked type="checkbox" onchange={handleChange}></lightning-input>
+        </template>
+        <template if:false={showchild}>
+          <lightning-input label="Show Child" type="checkbox" checked={showchild} onchange={handleChange}>
+          </lightning-input>
+        </template>
+      </div>
+    </lightning-card>
+  
+    <div class="slds-m-around_small">
+      <template if:true={showchild}>
+        <c-demo7-child property1={property1}></c-demo7-child>
+      </template>
+    </div>
+  
+  </template>
