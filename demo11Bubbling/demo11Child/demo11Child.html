@@ -1,0 +1,11 @@
+<template>
+	child <BR />
+	<div class="outerDiv" onnotify={outerDivNotify} style='border:3px dotted #FF0000; padding:10px'>
+		<div class="middleDiv" onnotify={middleDivNotify} style='border:3px dotted #00FF00; padding:10px'>
+			<div class="innerDiv" onnotify={innerDivNotify} style='border:3px dotted #0000FF; padding:10px'>
+				<lightning-button variant="brand" label="Child button" onclick={childClick}>
+				</lightning-button>
+			</div>
+		</div>
+	</div>
+</template>

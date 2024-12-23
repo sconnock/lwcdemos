@@ -1,0 +1,34 @@
+<template>
+
+	<lightning-card>
+		<lightning-vertical-navigation onselect={handleSelectItem}>
+
+			<lightning-vertical-navigation-section label="Navigation Section">
+				<lightning-vertical-navigation-item label="Navigation Item 1" name="item1" title="item1">
+				</lightning-vertical-navigation-item>
+				<lightning-vertical-navigation-item label="Navigation Item 2" name="item2" title="item2">
+				</lightning-vertical-navigation-item>
+			</lightning-vertical-navigation-section>
+
+			<lightning-vertical-navigation-overflow>
+				<lightning-vertical-navigation-item label="Navigation Item 3" name="item3" title="item3">
+				</lightning-vertical-navigation-item>
+				<lightning-vertical-navigation-item label="Navigation Item 4" name="item4" title="item4">
+				</lightning-vertical-navigation-item>
+			</lightning-vertical-navigation-overflow>
+
+			<lightning-vertical-navigation-item-badge label="Navigation Item Badge" name="itembadge" title="itembadge"
+				badge-count="3">
+			</lightning-vertical-navigation-item-badge>
+
+			<lightning-vertical-navigation-item-icon label="Navigation Item Icon" name="itemiconclock" title="itemiconclock"
+				icon-name="utility:clock">
+			</lightning-vertical-navigation-item-icon>
+			<lightning-vertical-navigation-item-icon label="Navigation Item Icon" name="itemiconuser" title="itemiconuser"
+				icon-name="utility:user">
+			</lightning-vertical-navigation-item-icon>
+
+		</lightning-vertical-navigation>
+	</lightning-card>
+
+</template>

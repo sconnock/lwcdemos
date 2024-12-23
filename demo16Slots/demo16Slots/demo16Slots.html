@@ -1,0 +1,16 @@
+<template>
+	Parent <br/>
+	<div style="border:3px dotted rgb(0, 0, 0); padding:10px">
+		<c-demo16-child>
+
+			<div slot="slot2" style="border:3px dotted rgb(0, 0, 255); padding:10px">Here is slot2</div>
+			<div slot="slot1" style="border:3px dotted #FF0000; padding:10px">Here is slot1</div>
+
+			<br/>{message}<br/>
+
+      Here is a button: <lightning-button label="Click Me" onclick={handleClick}></lightning-button>
+
+		</c-demo16-child>
+	</div>
+	Parent text
+</template>
