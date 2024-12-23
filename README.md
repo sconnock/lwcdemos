@@ -1,5 +1,5 @@
 # lwcdemos
-Simons demos for the DEX602 LWC training course
+Simon's demos for the DEX602 LWC training course
 
 Demo01 - Hello World
 
