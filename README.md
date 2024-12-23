@@ -1,7 +1,8 @@
 # lwcdemos
 Simons demos for the DEX602 LWC training course
 
-Demo01 - Hello World< br / >
+Demo01 - Hello World
+
 Demo02 - Reactivity in Private Properties with No Decorator< br / >
 Demo03 - Using the @track Decorator on Objects and Arrays< br / >
 Demo04 - Reactive Properties Demo 1< br / >
