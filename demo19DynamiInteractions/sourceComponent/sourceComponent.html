@@ -1,0 +1,15 @@
+<template>
+
+    <lightning-card title="Source Component">
+
+        <div class="slds-m-around_small">
+            <lightning-input label="Source message" value={sourceMessage} onchange={handleChange}></lightning-input>
+        </div>
+        
+        <div class="slds-m-around_small">
+            <lightning-button label="Click to send event" onclick={handleClick}></lightning-button>
+        </div>
+
+    </lightning-card>
+    
+</template>

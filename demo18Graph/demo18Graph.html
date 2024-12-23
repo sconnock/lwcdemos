@@ -1,0 +1,14 @@
+<template>
+	<lightning-card title="Recent Worldwide Deliveries (GQL)" icon-name="utility:world">
+		<ul lwc:if={deliveries} class="slds-var-m-horizontal_medium">
+		<template for:each={deliveries} for:item="delivery">
+			<li key={delivery.Id}>
+				<strong>{delivery.Course__r.Name.value}</strong>
+				<BR /> 
+				{delivery.Location__c.value} on {delivery.Start_Date__c.value}
+				<BR /><BR />
+			</li>
+		</template>
+		</ul>
+	</lightning-card>
+</template>

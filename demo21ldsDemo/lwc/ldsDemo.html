@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Get a Contact Record using LDS" icon-name="standard:contact">
+
+        <lightning-button-group slot="actions">
+            <lightning-button label="LDS Update" title="Update LDS" onclick={updateContactRecordLDS}></lightning-button>
+            <lightning-button label="Apex Update" title="Update Apex" onclick={updateContactRecordApex}></lightning-button>
+        </lightning-button-group>
+
+        <div class="slds-m-around_medium">
+            <lightning-input name="recordId" label="Contact ID" value={recordId} readonly onchange={handleChange}></lightning-input>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-input name="firstname" label="Contact First Name" value={firstname} onchange={handleChange} class="slds-m-bottom_small"> </lightning-input>
+            <lightning-input name="lastname" label="Contact Last Name" value={lastname} onchange={handleChange} class="slds-m-bottom_small"> </lightning-input>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <template if:true={message}>
+                <p style="color: green">{message}</p>
+            </template>
+        </div>    
+        
+        <div class="slds-m-around_medium">
+            <template if:true={errorMmessage}>
+                <p style="color: red">{errorMmessage}</p>
+            </template>
+        </div>         
+
+    </lightning-card>
+</template>
