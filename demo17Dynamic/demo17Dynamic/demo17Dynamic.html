@@ -1,6 +1,13 @@
 <template>
     <lightning-card title="Parent Component">
         <lightning-button label="Click to instantiate" onclick={handleClick} slot="actions"></lightning-button>
+
+        <div class="slds-var-p-horizontal_medium">
+            <lightning-input type="toggle" label="Select Child" checked lwc:ref="toggle"
+                             message-toggle-active="Child 1" message-toggle-inactive="Child 2">
+            </lightning-input>
+        </div>
+
         <div class="slds-var-p-horizontal_medium">
             <lwc:component lwc:is={componentConstructor}></lwc:component>
         </div>
