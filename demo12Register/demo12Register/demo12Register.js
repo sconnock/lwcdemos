@@ -21,9 +21,9 @@ export default class Demo12Register extends LightningElement {
 
     // renderedCallback() {
     //   if (!this.registered) {
-    //     const child1 = this.template.querySelector("c-child1");
+    //     const child1 = this.template.querySelector("c-demo12-child1");
     //     child1.addEventListener("sampleevent", this.handleSampleEvent);
-    //     const child2 = this.template.querySelector("c-child2");
+    //     const child2 = this.template.querySelector("c-demo12-child2");
     //     child2.addEventListener("sampleevent", this.handleSampleEvent);
     //     this.registered = true;
     //   }
