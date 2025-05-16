@@ -3,6 +3,7 @@ import { LightningElement } from 'lwc';
 export default class Demo17Dynamic extends LightningElement {
     componentConstructor1;
     componentConstructor2;
+    privateProp = "Boo";
 
     // handleClick() {
     //     import("c/demo17Child1")
