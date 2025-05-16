@@ -1,6 +1,7 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class Demo17Child2 extends LightningElement {
+	@api publicProp;
 
 	constructor() {
 		super();
@@ -17,5 +18,5 @@ export default class Demo17Child2 extends LightningElement {
 
 	disconnectedCallback() {
 		console.log("Child 2: disconnectedCallback");
-	}    
+	}
 }
